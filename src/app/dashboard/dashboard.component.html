@@ -1,0 +1,105 @@
+<div class="dashboard-body">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<div class="panel-header panel-header-lg">
+    <canvas baseChart id="bigDashboardChart"
+                [datasets]="lineBigDashboardChartData"
+                [labels]="lineBigDashboardChartLabels"
+                 [colors]="lineBigDashboardChartColors"
+                [options]="lineBigDashboardChartOptions"
+                [chartType]="lineBigDashboardChartType"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"></canvas>
+</div>
+
+<div class="main-content">
+  <div class="row">
+  
+    <div class="col-lg-6 col-md-16">
+      <div class="card card-chart">
+        <div class="card-header">
+          <h5 class="card-category">Sales</h5>
+          <h4 class="card-title">Availability</h4>
+            </div>
+            <div class="card-body">
+              <div class="chart-area">
+                <canvas id="myPieChart"></canvas>        
+                  </div>
+                  <div id="myPieChartLegend" class="chart-legend">
+
+                  </div>
+                </div>
+            </div>
+      </div>
+         
+  
+    <div class="col-lg-6 col-md-16">
+      <div class="card card-chart">
+        <div class="card-header">
+          <h5 class="card-category">Charging Statistics</h5>
+          <h4 class="card-title">24 Hours Performance</h4>
+        </div>
+        <div class="card-body">
+          <div class="chart-area">
+            <canvas baseChart
+            [datasets]="barChartData"
+            [labels]="barChartLabels"
+            [options]="barChartOptions"
+            [chartType]="barChartType"
+            [legend]="barChartLegend"
+            (chartClick)="chartClicked($event)">
+            </canvas>
+          </div>
+        
+        <div class="card-footer">
+          <div class="stats">
+            <i class="now-ui-icons ui-2_time-alarm"></i> Last 7 days
+          </div>
+        </div>
+      </div>
+  </div>
+  <br/>
+</div>
+</div>
+
+ <div class="row">
+    
+    <div class="col-md-10">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="card-category">Recent Appointments</h5>
+          <h4 class="card-title"> Transactions</h4>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead class="text-primary">
+                <tr>
+                  <th>Vehicle ID</th>
+                  <th>User ID</th>
+                  <th>Charging ID</th>
+                  <th>Starting Time</th>
+                  <th>End Time</th>
+                  <th>Energy Consumed</th>
+                  <th>Total Cost</th>
+                  <th>Payment Method</th>
+                  <th>Charging Time</th>
+                  <th class="text-right">Amount</th>
+                </tr>
+              </thead>
+              <tbody style="color: white;">
+                <tr><td>TXN107</td><td>U48562</td><td>CS110</td><td>2023-11-12 10:30</td><td>2023-11-12 11:45</td><td>22.0</td><td>$27.00</td><td>Credit Card</td><td>Medium Charging</td></tr>
+                <tr><td>TXN208</td><td>U57689</td><td>CS220</td><td>2023-11-13 12:00</td><td>2023-11-13 13:15</td><td>30.0</td><td>$33.00</td><td>Debit Card</td><td>Fast Charging</td></tr>
+                <tr><td>TXN309</td><td>U68874</td><<td>CS330</td><td>2023-11-14 15:30</td><td>2023-11-14 16:45</td><td>25.0</td><td>$28.00</td><td>Cash</td><td>Slow Charging</td></tr>
+                
+              </tbody>
+            </table>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>

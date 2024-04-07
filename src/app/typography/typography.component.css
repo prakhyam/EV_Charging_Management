@@ -1,0 +1,50 @@
+/* Apply styles to the table */
+.table {
+    width: 100%; /* Full width of the card */
+    max-width: 100%; /* Ensures the table does not exceed the card */
+    border-collapse: collapse; /* Collapses cell borders */
+    table-layout: fixed; /* Fixes table layout to avoid overflow */
+    color: #666; /* Adjusts the text color */
+    font-family: 'Open Sans', sans-serif; /* Set font family to Open Sans or fallback to sans-serif */
+    -webkit-font-smoothing: antialiased; /* Improves readability of text */
+    -moz-osx-font-smoothing: grayscale; /* Improves readability of text on OSX */
+}
+
+/* Style the table header */
+.table thead th {
+    background-color: #fff; /* White background for the header */
+    color: #333; /* Darker text color for contrast */
+    padding: 15px; /* Adjust padding inside header cells */
+    text-align: left; /* Left-align text in header cells */
+    border-bottom: 1px solid #e7e7e7; /* Light grey border for header cells */
+    font-weight: 600; /* Make header font bold */
+}
+
+/* Style the table body */
+.table tbody td {
+    padding: 15px; /* Adjust padding inside body cells */
+    border-bottom: 1px solid #e7e7e7; /* Consistent border style with the header */
+    vertical-align: middle; /* Aligns content in the middle vertically */
+}
+
+/* Style alternating rows with a background color */
+.table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9; /* Slightly off-white background for odd rows */
+}
+
+/* Style for hover effect on rows */
+.table tbody tr:hover {
+    background-color: #f1f1f1; /* Light grey background when row is hovered */
+}
+
+/* Style table on smaller screens */
+@media screen and (max-width: 768px) {
+    .table {
+        font-size: 13px; /* Further reduce font size for smaller screens */
+    }
+    
+    .table thead th,
+    .table tbody td {
+        padding: 10px; /* Further reduce padding for smaller screens */
+    }
+}
